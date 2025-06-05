@@ -1,20 +1,13 @@
-//! enum 
-var roles;
-(function (roles) {
-    roles[roles["Admin"] = 0] = "Admin";
-    roles[roles["User"] = 1] = "User";
-    roles[roles["Teacher"] = 2] = "Teacher";
-})(roles || (roles = {}));
-console.log(roles);
-var user = {
-    id: 1,
-    age: 16,
-    name: "Alireza",
-    role: roles.Admin
+var sum = function (num1, num2) {
+    return num1 + num2;
 };
-if (user.role === roles.Admin) {
-    console.log("You access this page");
-}
-else {
-    console.log("You not access this page");
-}
+var logger = function (param) {
+    console.log("Result: ".concat(param));
+};
+//! void => a function don't return a value
+var logger2 = function (param) {
+    console.log("Result: ".concat(param));
+};
+console.log(logger("Alireza(F.C.B)"));
+console.log(logger2("Alireza(F.C.B)"));
+//? both funcs return undefined but first func is void and second func is undefined output
