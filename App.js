@@ -7,13 +7,20 @@ class Person {
         (this.name = name), (this.age = age), (this.job = job);
     }
 }
+class Student extends Person {
+    skills;
+    constructor(name, job, age, skills) {
+        super(name, job, age);
+        this.skills = skills;
+    }
+}
 const aliPerson = new Person("Alireza", "FrontEnd Developer", 16);
 console.log(aliPerson);
-const testPerson = { name: "Test", age: 18, job: "FullStack Developer" };
-console.log(testPerson);
-const users = [
-    aliPerson,
-    testPerson,
-    { name: "Alirezads", job: "BackEnd Developer", age: 198 }
-];
-console.log(users);
+const aliStudent = new Student("Alireza", "Fullstack Developer", 16, [
+    "React",
+    "Tailwind",
+    "Js",
+    "Html",
+    "Css",
+]);
+console.log(aliStudent);
