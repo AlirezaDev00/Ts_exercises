@@ -10,4 +10,5 @@ class Person {
 
 const aliPerson = new Person("Alireza", "FrontEnd Developer", 16);
 
+
 console.log(aliPerson);
