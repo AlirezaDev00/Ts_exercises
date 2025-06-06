@@ -8,13 +8,16 @@
 class Person {
   public name: string;
   job: string; //* Public
-  protected age: number = 18;
+  readonly age: number = 18;
 
   constructor(name: string, job: string, age: number) {
     (this.name = name), (this.age = age), (this.job = job);
   }
-}
 
+  // setAge(userAge : number) {
+  //   this.age = userAge
+  // }
+}
 
 class Student extends Person {
   skills: string[];
@@ -23,12 +26,12 @@ class Student extends Person {
     super(name, job, age);
     this.skills = skills;
 
-    this.setAge(189)
+    // this.setAge(189)
   }
 
-  setAge(userAge : number) {
-    this.age = userAge
-  }
+  // setAge(userAge : number) {
+  //   this.age = userAge
+  // }
 }
 
 const aliPerson = new Person("Alireza", "FrontEnd Developer", 16);
@@ -46,4 +49,5 @@ const aliStudent = new Student("Alireza", "Fullstack Developer", 16, [
 // aliStudent.age = 18
 
 console.log(aliStudent);
+console.log(aliStudent.age);
 
