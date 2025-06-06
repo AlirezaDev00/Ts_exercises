@@ -1,7 +1,14 @@
+//! Public , Private , ReadOnly , Protected
+
+//? Public = Read and write everywhere
+//? Private = Just read and write in super or defined class
+//? ReadOnly = Just read everywhere , can't write everywhere
+//? Protected = Read and write just super class and sub class
+
 class Person {
-  name: string;
-  job: string;
-  age: number;
+  public name: string;
+  job: string; //* Public
+  private age: number = 18;
 
   constructor(name: string, job: string, age: number) {
     (this.name = name), (this.age = age), (this.job = job);
@@ -14,7 +21,13 @@ class Student extends Person {
   constructor(name: string, job: string, age: number, skills: string[]) {
     super(name, job, age);
     this.skills = skills;
+
+    // this.setAge(189)
   }
+
+  // setAge(userAge) {
+  //   this.age = userAge
+  // }
 }
 
 const aliPerson = new Person("Alireza", "FrontEnd Developer", 16);
@@ -28,6 +41,8 @@ const aliStudent = new Student("Alireza", "Fullstack Developer", 16, [
   "Html",
   "Css",
 ]);
+
+// aliStudent.age = 18
 
 console.log(aliStudent);
 
