@@ -15,6 +15,7 @@ class Person {
   }
 }
 
+
 class Student extends Person {
   skills: string[];
 
