@@ -9,3 +9,11 @@ class Person {
 }
 const aliPerson = new Person("Alireza", "FrontEnd Developer", 16);
 console.log(aliPerson);
+const testPerson = { name: "Test", age: 18, job: "FullStack Developer" };
+console.log(testPerson);
+const users = [
+    aliPerson,
+    testPerson,
+    { name: "Alirezads", job: "BackEnd Developer", age: 198 }
+];
+console.log(users);
