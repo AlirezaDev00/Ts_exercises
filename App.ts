@@ -6,11 +6,11 @@
 //? Protected = Read and write just super class and sub class
 
 class Person {
-  public name: string;
-  job: string; //* Public
-  readonly age: number = 18;
+  // public name: string;
+  // job: string; //* Public
+  // readonly age: number = 18;
 
-  constructor(name: string, job: string, age: number) {
+  constructor(public name: string, public job: string, readonly age: number) {
     (this.name = name), (this.age = age), (this.job = job);
   }
 
