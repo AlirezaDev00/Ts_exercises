@@ -5,6 +5,7 @@
 //? ReadOnly = Just read everywhere , can't write everywhere
 //? Protected = Read and write just super class and sub class
 
+
 class Person {
   // public name: string;
   // job: string; //* Public
