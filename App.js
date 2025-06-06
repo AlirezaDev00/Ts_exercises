@@ -26,8 +26,8 @@ class Student extends Person {
         // this.setAge(189)
     }
 }
-// const aliPerson = new Person("Alireza", "FrontEnd Developer", 16);
-// console.log(aliPerson);
+const aliPerson = new Person("Alireza", "FrontEnd Developer", 16);
+console.log(aliPerson);
 const aliStudent = new Student("Alireza", "Fullstack Developer", 16, [
     "React",
     "Tailwind",
