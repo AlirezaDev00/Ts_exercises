@@ -30,3 +30,4 @@ const aliStudent = new Student("Alireza", "Fullstack Developer", 16, [
 ]);
 
 console.log(aliStudent);
+
