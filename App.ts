@@ -30,7 +30,10 @@ class Student extends Person {
   get getSkills() {
     return this._skills
   }
-  
+
+  set setSkills(skill: string) {
+    this._skills.push(skill)
+  }
 }
 
 const aliPerson = new Person("Alireza", "FrontEnd Developer", 16);
@@ -48,6 +51,9 @@ const aliStudent = new Student("Alireza", "Fullstack Developer", 16, [
 // aliStudent.age = 18
 // console.log(aliStudent);
 // console.log(aliStudent.age);
+aliStudent.setSkills = "Python"
 
 console.log(aliStudent.getSkills);
+
+console.log(aliStudent);
 
