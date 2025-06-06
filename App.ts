@@ -8,14 +8,13 @@
 class Person {
   public name: string;
   job: string; //* Public
-  private age: number = 18;
+  protected age: number = 18;
 
   constructor(name: string, job: string, age: number) {
     (this.name = name), (this.age = age), (this.job = job);
   }
 }
 
- 
 class Student extends Person {
   skills: string[];
 
@@ -23,12 +22,12 @@ class Student extends Person {
     super(name, job, age);
     this.skills = skills;
 
-    // this.setAge(189)
+    this.setAge(189)
   }
 
-  // setAge(userAge) {
-  //   this.age = userAge
-  // }
+  setAge(userAge : number) {
+    this.age = userAge
+  }
 }
 
 const aliPerson = new Person("Alireza", "FrontEnd Developer", 16);

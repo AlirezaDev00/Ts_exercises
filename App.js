@@ -17,7 +17,10 @@ class Student extends Person {
     constructor(name, job, age, skills) {
         super(name, job, age);
         this.skills = skills;
-        // this.setAge(189)
+        this.setAge(189);
+    }
+    setAge(userAge) {
+        this.age = userAge;
     }
 }
 const aliPerson = new Person("Alireza", "FrontEnd Developer", 16);
