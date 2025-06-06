@@ -30,6 +30,7 @@ class Student extends Person {
   get getSkills() {
     return this._skills
   }
+  
 }
 
 const aliPerson = new Person("Alireza", "FrontEnd Developer", 16);
