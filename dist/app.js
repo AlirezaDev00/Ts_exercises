@@ -2,9 +2,8 @@
 const aliUser = {
     id: 12,
     name: "Alireza",
-    age: 17,
     info() {
-        return `${this.id} - ${this.name} - ${this.age}`;
+        return `${this.id} - ${this.name}`;
     },
 };
 console.log(aliUser.info());

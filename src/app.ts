@@ -1,7 +1,7 @@
 interface user {
   id: number;
   name: string;
-  age: number;
+  age?: number;
 
   info(): string;
 }
@@ -9,9 +9,8 @@ interface user {
 const aliUser: user = {
   id: 12,
   name: "Alireza",
-  age: 17,
   info() {
-    return `${this.id} - ${this.name} - ${this.age}`;
+    return `${this.id} - ${this.name}`;
   },
 };
 
