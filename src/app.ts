@@ -2,6 +2,10 @@ class Person {
   constructor(public name: string, public job: string, readonly age: number) {
     (this.name = name), (this.age = age), (this.job = job);
   }
+
+  info(): string {
+    return `${this.name} (Info) (Person)`;
+  }
 }
 
 class Student extends Person {
@@ -19,6 +23,10 @@ class Student extends Person {
   set setSkills(skill: string) {
     this._skills.push(skill);
   }
+
+//   info(): string {
+//     return `${this.name} (Info) (Student)`;
+//   }
 }
 
 const aliPerson = new Person("Alireza", "FrontEnd Developer", 16);
@@ -42,24 +50,25 @@ console.log(aliStudent);
 //* Static
 
 class Home {
-    private static count: number = 0
+  private static count: number = 0;
 
-    constructor(public name: string, public location: string) {
-        this.location = location
-        this.name = name
-        ++Home.count
-    }
+  constructor(public name: string, public location: string) {
+    this.location = location;
+    this.name = name;
+    ++Home.count;
+  }
 
-    public static get getCount() {
-        // this.static
-        return `Count : ${Home.count}`
-    }
+  public static get getCount() {
+    // this.static
+    return `Count : ${Home.count}`;
+  }
 }
 
-const aliHome = new Home("Diamond", "Karaj , Loqman Hakim Street, Bon JavadPoor")
-const aliHome2 = new Home("Diamond", "Karaj , Loqman Hakim Street, Bon JavadPoor")
+// const aliHome = new Home("Diamond", "Karaj , Loqman Hakim Street, Bon JavadPoor")
+// const aliHome2 = new Home("Diamond", "Karaj , Loqman Hakim Street, Bon JavadPoor")
 
-// aliHome.count
-// aliHome.getCount
-// console.log(Home.count); 
-console.log(Home.getCount);
+// // aliHome.count
+// // aliHome.getCount
+// // console.log(Home.count);
+// console.log(Home.getCount);
+console.log(aliStudent.info());

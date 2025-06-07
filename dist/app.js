@@ -9,6 +9,9 @@ class Person {
         this.age = age;
         (this.name = name), (this.age = age), (this.job = job);
     }
+    info() {
+        return `${this.name} (Info) (Person)`;
+    }
 }
 class Student extends Person {
     _skills;
@@ -52,10 +55,11 @@ class Home {
         return `Count : ${Home.count}`;
     }
 }
-const aliHome = new Home("Diamond", "Karaj , Loqman Hakim Street, Bon JavadPoor");
-const aliHome2 = new Home("Diamond", "Karaj , Loqman Hakim Street, Bon JavadPoor");
-// aliHome.count
-// aliHome.getCount
-// console.log(Home.count); 
-console.log(Home.getCount);
+// const aliHome = new Home("Diamond", "Karaj , Loqman Hakim Street, Bon JavadPoor")
+// const aliHome2 = new Home("Diamond", "Karaj , Loqman Hakim Street, Bon JavadPoor")
+// // aliHome.count
+// // aliHome.getCount
+// // console.log(Home.count);
+// console.log(Home.getCount);
+console.log(aliStudent.info());
 //# sourceMappingURL=app.js.map
