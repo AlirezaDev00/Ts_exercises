@@ -13,7 +13,4 @@ const bugattiChiron = {
         console.log(`This Car ${this.company} Stopped!`);
     },
 };
-console.log(bugattiChiron);
-bugattiChiron.drive(450);
-bugattiChiron.stop();
 //# sourceMappingURL=app.js.map

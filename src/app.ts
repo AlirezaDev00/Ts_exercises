@@ -28,6 +28,3 @@ const bugattiChiron: bugatti = {
   },
 };
 
-console.log(bugattiChiron);
-bugattiChiron.drive(450)
-bugattiChiron.stop()
