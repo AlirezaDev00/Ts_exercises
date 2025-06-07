@@ -70,3 +70,4 @@ class Home {
 // // console.log(Home.count);
 // console.log(Home.getCount);
 console.log(aliStudent.info());
+
