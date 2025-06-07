@@ -1,16 +1,8 @@
 "use strict";
-//! Public , Private , ReadOnly , Protected
-//? Public = Read and write everywhere
-//? Private = Just read and write in super or defined class
-//? ReadOnly = Just read everywhere , can't write everywhere
-//? Protected = Read and write just super class and sub class
 class Person {
     name;
     job;
     age;
-    // public name: string;
-    // job: string; //* Public
-    // readonly age: number = 18;
     constructor(name, job, age) {
         this.name = name;
         this.job = job;
@@ -40,9 +32,30 @@ const aliStudent = new Student("Alireza", "Fullstack Developer", 16, [
     "Html",
     "Css",
 ]);
-// aliStudent.age = 18
-// console.log(aliStudent);
-// console.log(aliStudent.age);
 aliStudent.setSkills = "Python";
 console.log(aliStudent.getSkills);
 console.log(aliStudent);
+//* Static
+class Home {
+    name;
+    location;
+    static count = 0;
+    constructor(name, location) {
+        this.name = name;
+        this.location = location;
+        this.location = location;
+        this.name = name;
+        ++Home.count;
+    }
+    static get getCount() {
+        // this.static
+        return `Count : ${Home.count}`;
+    }
+}
+const aliHome = new Home("Diamond", "Karaj , Loqman Hakim Street, Bon JavadPoor");
+const aliHome2 = new Home("Diamond", "Karaj , Loqman Hakim Street, Bon JavadPoor");
+// aliHome.count
+// aliHome.getCount
+// console.log(Home.count); 
+console.log(Home.getCount);
+//# sourceMappingURL=app.js.map

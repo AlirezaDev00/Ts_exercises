@@ -38,3 +38,28 @@ aliStudent.setSkills = "Python";
 console.log(aliStudent.getSkills);
 
 console.log(aliStudent);
+
+//* Static
+
+class Home {
+    private static count: number = 0
+
+    constructor(public name: string, public location: string) {
+        this.location = location
+        this.name = name
+        ++Home.count
+    }
+
+    public static get getCount() {
+        // this.static
+        return `Count : ${Home.count}`
+    }
+}
+
+const aliHome = new Home("Diamond", "Karaj , Loqman Hakim Street, Bon JavadPoor")
+const aliHome2 = new Home("Diamond", "Karaj , Loqman Hakim Street, Bon JavadPoor")
+
+// aliHome.count
+// aliHome.getCount
+// console.log(Home.count); 
+console.log(Home.getCount);
