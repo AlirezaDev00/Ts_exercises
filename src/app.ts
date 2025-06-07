@@ -1,11 +1,9 @@
-class Person {
+abstract class Person {
   constructor(public name: string, public job: string, readonly age: number) {
     (this.name = name), (this.age = age), (this.job = job);
   }
 
-  info(): string {
-    return `${this.name} (Info) (Person)`;
-  }
+  abstract info():string
 }
 
 class Student extends Person {
@@ -24,14 +22,14 @@ class Student extends Person {
     this._skills.push(skill);
   }
 
-//   info(): string {
-//     return `${this.name} (Info) (Student)`;
-//   }
+  info(): string {
+      return `${this.name} as (Student)`
+  }
 }
 
-const aliPerson = new Person("Alireza", "FrontEnd Developer", 16);
+// const aliPerson = new Person("Alireza", "FrontEnd Developer", 16);
 
-console.log(aliPerson);
+// console.log(aliPerson);
 
 const aliStudent = new Student("Alireza", "Fullstack Developer", 16, [
   "React",

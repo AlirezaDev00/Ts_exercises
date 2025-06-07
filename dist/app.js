@@ -9,9 +9,6 @@ class Person {
         this.age = age;
         (this.name = name), (this.age = age), (this.job = job);
     }
-    info() {
-        return `${this.name} (Info) (Person)`;
-    }
 }
 class Student extends Person {
     _skills;
@@ -25,9 +22,12 @@ class Student extends Person {
     set setSkills(skill) {
         this._skills.push(skill);
     }
+    info() {
+        return `${this.name} as (Student)`;
+    }
 }
-const aliPerson = new Person("Alireza", "FrontEnd Developer", 16);
-console.log(aliPerson);
+// const aliPerson = new Person("Alireza", "FrontEnd Developer", 16);
+// console.log(aliPerson);
 const aliStudent = new Student("Alireza", "Fullstack Developer", 16, [
     "React",
     "Tailwind",
