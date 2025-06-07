@@ -15,4 +15,5 @@ const aliUser: user = {
   },
 };
 
+
 console.log(aliUser.info());
