@@ -28,3 +28,43 @@ const bugattiChiron: bugatti = {
   },
 };
 
+class BugattiTourbilon implements bugatti {
+  constructor(
+    public company: string,
+    public color: string,
+    public year: number,
+    public model: string,
+    public passengers: number,
+    public material: string,
+    public Torbou: boolean
+  ) {
+    (this.company = company), (this.color = color);
+    (this.year = year),
+      (this.model = model),
+      (this.passengers = passengers),
+      (this.material = material),
+      (this.Torbou = Torbou);
+  }
+
+  drive(speed: number): void {
+    console.log(`This Car Can Drive With ${speed}km/h Speed!`);
+  }
+
+  stop() {
+    console.log(`This Car ${this.company} Stopped!`);
+  }
+}
+
+const BugattiTourbilon1 = new BugattiTourbilon(
+  "Bugatti",
+  "Silver-Blue",
+  2030,
+  "TourBillon",
+  2,
+  "FiberCarbon",
+  true
+);
+
+console.log(BugattiTourbilon1);
+BugattiTourbilon1.drive(450)
+BugattiTourbilon1.stop()
