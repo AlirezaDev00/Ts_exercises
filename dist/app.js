@@ -1,50 +1,19 @@
 "use strict";
-const bugattiChiron = {
-    company: "Bugatti(FoloxWagon)",
-    color: "White-Blue",
-    year: 2028,
-    model: "Chiron",
-    passengers: 2,
-    material: "FiberCarbon",
-    drive(speed) {
-        console.log(`This Car Can Driving With ${speed}km/h speed!`);
-    },
-    stop() {
-        console.log(`This Car ${this.company} Stopped!`);
-    },
+//! The Bad Code
+// type teacherAdmin = {
+//   name: string,
+//   privileges: string[],
+//   startDate : Date
+// }
+const ReazaDolati = {
+    name: "Reza Dolati",
+    startDate: new Date()
 };
-class BugattiTourbilon {
-    company;
-    color;
-    year;
-    model;
-    passengers;
-    material;
-    Torbou;
-    constructor(company, color, year, model, passengers, material, Torbou) {
-        this.company = company;
-        this.color = color;
-        this.year = year;
-        this.model = model;
-        this.passengers = passengers;
-        this.material = material;
-        this.Torbou = Torbou;
-        (this.company = company), (this.color = color);
-        (this.year = year),
-            (this.model = model),
-            (this.passengers = passengers),
-            (this.material = material),
-            (this.Torbou = Torbou);
-    }
-    drive(speed) {
-        console.log(`This Car Can Drive With ${speed}km/h Speed!`);
-    }
-    stop() {
-        console.log(`This Car ${this.company} Stopped!`);
-    }
-}
-const BugattiTourbilon1 = new BugattiTourbilon("Bugatti", "Silver-Blue", 2030, "TourBillon", 2, "FiberCarbon", true);
-console.log(BugattiTourbilon1);
-BugattiTourbilon1.drive(450);
-BugattiTourbilon1.stop();
+// console.log(ReazaDolati);
+const saeediRad = {
+    name: "MohammadAmin Saeedirad",
+    startDate: new Date(),
+    privileges: ["Accept Comments", "Remove Comments", "Delete Users"]
+}; //? inter Section type
+console.log(saeediRad);
 //# sourceMappingURL=app.js.map
