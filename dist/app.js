@@ -1,26 +1,9 @@
 "use strict";
-const logger = (param) => {
-    // if ("privileges" in param) {
-    //   //....
-    // } else if ("startDate" in param) {
-    //   //...
-    // }
-    switch (param.name) {
-        case "Admin": {
-            console.log("Admin Logged");
-            break;
-        }
-        case "Teacher": {
-            console.log("Teacher Logged");
-            break;
-        }
-        default: {
-            throw new Error("Invalid Parameter");
-        }
+function add(param1, param2) {
+    if (typeof param1 === "number" && typeof param2 === "number") {
+        return param1 + param2;
     }
-};
-const aliAdmin = { name: "Admin", privileges: ["Accept Comment"] };
-const teacherAli = { name: "Teacher", startDate: new Date() };
-// logger(aliAdmin)
-logger(teacherAli);
+    return param1.toString() + param2.toString();
+}
+console.log(add("Alireza", " Is The Best Ever!").split(""));
 //# sourceMappingURL=app.js.map

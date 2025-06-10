@@ -1,38 +1,13 @@
-type admin = {
-  name: "Admin";
-  privileges: string[];
-};
+type combine = string | number;
 
-type teacher = {
-  name: "Teacher";
-  startDate: Date;
-};
+function add(param1: string, param2: string): string;
+function add(param1: number, param2: number): number;
 
-const logger = (param: admin | teacher) => {
-  // if ("privileges" in param) {
-  //   //....
-  // } else if ("startDate" in param) {
-  //   //...
-  // }
-
-  switch (param.name) {
-    case "Admin": {
-      console.log("Admin Logged");
-      break;
-    }
-    case "Teacher": {
-      console.log("Teacher Logged");
-      break;
-    }
-
-    default: {
-      throw new Error("Invalid Parameter")
-    }
+function add(param1: combine, param2: combine): combine {
+  if (typeof param1 === "number" && typeof param2 === "number") {
+    return param1 + param2;
   }
-};
+  return param1.toString() + param2.toString();
+}
 
-const aliAdmin: admin = { name: "Admin", privileges: ["Accept Comment"] }
-const teacherAli : teacher = {name: "Teacher" , startDate : new Date()}
-
-// logger(aliAdmin)
-logger(teacherAli)
+console.log(add("Alireza", " Is The Best Ever!").split(""));
