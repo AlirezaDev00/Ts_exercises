@@ -27,3 +27,4 @@ function merge<T, T2>(obj1: T, obj2: T2): T & T2 {
 const mergedObjs = merge({ name: "alireza" }, { age: 16 })
 // mergedObjs.name
 // const mergeStrs = merge("Alireza", "Is The Best Ever")
+
