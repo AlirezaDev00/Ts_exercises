@@ -9,6 +9,7 @@ function logger(param: number) {
   };
 }
 
+
 @logger(18)
 class User {
   constructor(public name: string, public age: number, public email: string) {
