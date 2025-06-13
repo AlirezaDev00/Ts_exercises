@@ -8,10 +8,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-function logger(constructor) {
-    console.log("Constructor => ", constructor);
-    constructor.prototype.id = crypto.randomUUID();
-    console.log(constructor.prototype.id);
+function logger(param) {
+    //! decorator factory
+    return function (constructor) {
+        console.log("Constructor => ", constructor);
+        constructor.prototype.id = param;
+        console.log(constructor.prototype.id);
+    };
 }
 let User = class User {
     name;
@@ -30,7 +33,7 @@ let User = class User {
     }
 };
 User = __decorate([
-    logger,
+    logger(18),
     __metadata("design:paramtypes", [String, Number, String])
 ], User);
 const ali = new User("alireza", 15, "AlirezadeveloperUi@gmail.com");
