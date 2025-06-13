@@ -28,14 +28,27 @@ function insertInDOM(value) {
         }
     };
 }
-function ToLowerCase(target, methodName, descriptor) {
-    // console.log(target);
-    // console.log(methodName);
-    // console.log(descriptor);
-    // console.log(descriptor.value);
-    const mainMethod = descriptor.value;
-    descriptor.value = function (param) {
-        mainMethod.call(this, param);
+// function ToLowerCase(
+//   target: object,
+//   methodName: string,
+//   descriptor: PropertyDescriptor
+// ) {
+//   // console.log(target);
+//   // console.log(methodName);
+//   // console.log(descriptor);
+//   // console.log(descriptor.value);
+//   const mainMethod = descriptor.value;
+//   descriptor.value = function (param: string) {
+//     mainMethod.call(this, param);
+//   };
+// }
+function ToUpperCase(target, methodName, descriptor) {
+    console.log(target);
+    console.log(methodName);
+    const mainMethod = descriptor.get;
+    descriptor.get = function () {
+        const res = mainMethod?.call(this);
+        return typeof res === "string" ? res.toUpperCase() : res;
     };
 }
 // @logger(18)
@@ -52,17 +65,21 @@ class User {
         this.age = age;
         this.email = email;
     }
+    // @ToLowerCase
     speak(word) {
         console.log(`${this.name} says ${word}`);
     }
+    get fullInfo() {
+        return `${this.name} - ${this.age} - ${this.email}`;
+    }
 }
 __decorate([
-    ToLowerCase,
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String]),
-    __metadata("design:returntype", void 0)
-], User.prototype, "speak", null);
+    ToUpperCase,
+    __metadata("design:type", Object),
+    __metadata("design:paramtypes", [])
+], User.prototype, "fullInfo", null);
 const ali = new User("alireza", 15, "AlirezadeveloperUi@gmail.com");
 const komeyl = new User("kml", 9, "kml@gmail.com");
-ali.speak("Hello Ts");
+console.log(ali.fullInfo);
+// ali.speak("Hello Ts")
 //# sourceMappingURL=app.js.map
