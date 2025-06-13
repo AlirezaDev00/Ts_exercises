@@ -23,8 +23,21 @@ function insertInDOM(value: string) {
         }
     }
 } 
-@logger(18)
-@insertInDOM("<h1>Hello Im Alireza Is The Best Ever !!</h1>")
+
+function ToLowerCase(target: object, methodName: string, descriptor: PropertyDescriptor) {
+    // console.log(target);
+    // console.log(methodName);
+    // console.log(descriptor);
+    // console.log(descriptor.value);
+
+    const mainMethod = descriptor.value
+
+    descriptor.value = function (param: string) {
+        mainMethod.call(this , param)
+    }
+}
+// @logger(18)
+// @insertInDOM("<h1>Hello Im Alireza Is The Best Ever !!</h1>")
 class User {
   constructor(public name: string, public age: number, public email: string) {
     this.name = name;
@@ -32,6 +45,7 @@ class User {
     this.email = email;
   }
 
+  @ToLowerCase
   speak(word: string): void {
     console.log(`${this.name} says ${word}`);
   }
@@ -39,3 +53,5 @@ class User {
 
 const ali = new User("alireza", 15, "AlirezadeveloperUi@gmail.com");
 const komeyl = new User("kml", 9, "kml@gmail.com");
+
+ali.speak("Hello Ts")
