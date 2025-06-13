@@ -16,6 +16,18 @@ function logger(param) {
         console.log(constructor.prototype.id);
     };
 }
+function insertInDOM(value) {
+    return function (target) {
+        console.log("Target => ", target);
+        const rootElem = document.querySelector("#root");
+        if (rootElem) {
+            rootElem.innerHTML = value;
+        }
+        else {
+            throw new Error("Element Is NotDefined");
+        }
+    };
+}
 let User = class User {
     name;
     age;
@@ -34,6 +46,7 @@ let User = class User {
 };
 User = __decorate([
     logger(18),
+    insertInDOM("<h1>Hello Im Alireza Is The Best Ever !!</h1>"),
     __metadata("design:paramtypes", [String, Number, String])
 ], User);
 const ali = new User("alireza", 15, "AlirezadeveloperUi@gmail.com");
