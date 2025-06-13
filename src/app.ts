@@ -6,7 +6,6 @@ function logger(constructor: Function) {
     console.log(constructor.prototype.id);
 }
 
-
 @logger
 class User  {
     constructor(
