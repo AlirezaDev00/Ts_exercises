@@ -81,3 +81,4 @@ const ali = new User("alireza", 15, "AlirezadeveloperUi@gmail.com");
 const komeyl = new User("kml", 9, "kml@gmail.com");
 console.log(ali.fullInfo);
 // ali.speak("Hello Ts")
+
