@@ -1,22 +1,11 @@
 "use strict";
-class List {
-    items = [];
-    addItem(item) {
-        this.items.push(item);
-    }
-    get getItems() {
-        return this.items;
-    }
-}
-class List2 {
-    items = [];
-    // private items: boolean[] | string[] | number[] = [];
-    addItem(item) {
-        this.items.push(item);
-        return true;
-    }
-    get getItems() {
-        return this.items;
-    }
-}
+const ali = { name: "Alireza", age: 16, email: "alireza@gmail.com" };
+// const aliOptional : OptionalUser = {name: "Alireza"}
+const aliOptional = { name: "Alireza" };
+const aliReadOnly = { name: "Alireza", age: 17, email: "alirezadeveloperui@gmail.com" };
+const aliUser = { name: "Alireza", age: null };
+// aliUser.name = "ALireza"
+// aliUser.age = 189
+console.log(aliUser.name);
+console.log(aliUser.age);
 //# sourceMappingURL=app.js.map
