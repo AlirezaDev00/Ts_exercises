@@ -1,4 +1,8 @@
-// @ts-check
+/**
+ *
+ * @param {number} number
+ * @returns {number}
+ */
 
 const pow = (number) => {
   return Math.pow(number, 2);
@@ -6,8 +10,15 @@ const pow = (number) => {
 
 export { pow };
 
-// const sum = (number1, number2) => {
-//   return number1 + number2;
-// };
+/**
+ * 
+ * @param {number} number1 
+ * @param {number} number2 
+ * @returns {number}
+ */
+  
+const sum = (number1, number2) => {
+  return number1 + number2;
+};
 
-// export { sum };
+export { sum };
