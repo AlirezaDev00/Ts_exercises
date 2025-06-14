@@ -3,3 +3,4 @@ const pow = (number) => {
 };
 
 export { pow };
+
