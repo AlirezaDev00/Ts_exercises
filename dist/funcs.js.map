@@ -1,1 +1,1 @@
-{"version":3,"file":"funcs.js","sourceRoot":"","sources":["../src/funcs.js"],"names":[],"mappings":";;;AAAA,MAAM,GAAG,GAAG,CAAC,MAAM,EAAE,EAAE;IACrB,OAAO,IAAI,CAAC,GAAG,CAAC,MAAM,EAAE,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC;AAEO,kBAAG"}
+{"version":3,"file":"funcs.js","sourceRoot":"","sources":["../src/funcs.js"],"names":[],"mappings":";;AAIS,kBAAG;AAMH,kBAAG;AAVZ,SAAS,GAAG,CAAC,MAAM;IACjB,OAAO,IAAI,CAAC,GAAG,CAAC,MAAM,EAAE,CAAC,CAAC,CAAC;AAC7B,CAAC;AAID,SAAS,GAAG,CAAC,OAAO,EAAE,OAAO;IAC3B,OAAO,OAAO,GAAG,OAAO,CAAC;AAC3B,CAAC"}
