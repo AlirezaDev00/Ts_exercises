@@ -1,3 +1,5 @@
+// @ts-check
+
 const pow = (number) => {
   return Math.pow(number, 2);
 };
