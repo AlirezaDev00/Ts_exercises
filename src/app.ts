@@ -40,27 +40,41 @@ function insertInDOM(value: string) {
 //   };
 // }
 
-function ToUpperCase(
-  target: object,
-  methodName: string,
-  descriptor: PropertyDescriptor
-) {
-  console.log(target);
-  console.log(methodName);
+// function ToUpperCase(
+//   target: object,
+//   methodName: string,
+//   descriptor: PropertyDescriptor
+// ) {
+//   console.log(target);
+//   console.log(methodName);
 
-  const mainMethod = descriptor.get
+//   const mainMethod = descriptor.get;
 
-  descriptor.get = function ()  {
-    const res = mainMethod?.call(this)
+//   descriptor.get = function () {
+//     const res = mainMethod?.call(this);
 
-    return typeof res === "string" ? res.toUpperCase() : res
-  }
+//     return typeof res === "string" ? res.toUpperCase() : res;
+//   };
+// }
+
+function MinLength(limit: number) {
+  return function (target: object, propertyKey: string ) {
+    console.log(target);
+    console.log(propertyKey);
+    console.log(limit);
+    //! In this method, we only have access to the name and prototype of the class itself, but to change the properties and class, a library called Reflect Metadata must be used, which has additional explanations in the ts document.
+  };
+
+
 }
 
 // @logger(18)
 // @insertInDOM("<h1>Hello Im Alireza Is The Best Ever !!</h1>")
 class User {
-  constructor(public name: string, public age: number, public email: string) {
+  @MinLength(3)
+  public name: string;
+
+  constructor(name: string, public age: number, public email: string) {
     this.name = name;
     this.age = age;
     this.email = email;
@@ -71,7 +85,7 @@ class User {
     console.log(`${this.name} says ${word}`);
   }
 
-  @ToUpperCase
+  // @ToUpperCase
   get fullInfo() {
     return `${this.name} - ${this.age} - ${this.email}`;
   }
@@ -79,6 +93,5 @@ class User {
 
 const ali = new User("alireza", 15, "AlirezadeveloperUi@gmail.com");
 const komeyl = new User("kml", 9, "kml@gmail.com");
-console.log(ali.fullInfo);
+// console.log(ali.fullInfo);
 // ali.speak("Hello Ts")
-

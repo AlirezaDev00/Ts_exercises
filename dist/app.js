@@ -42,23 +42,34 @@ function insertInDOM(value) {
 //     mainMethod.call(this, param);
 //   };
 // }
-function ToUpperCase(target, methodName, descriptor) {
-    console.log(target);
-    console.log(methodName);
-    const mainMethod = descriptor.get;
-    descriptor.get = function () {
-        const res = mainMethod?.call(this);
-        return typeof res === "string" ? res.toUpperCase() : res;
+// function ToUpperCase(
+//   target: object,
+//   methodName: string,
+//   descriptor: PropertyDescriptor
+// ) {
+//   console.log(target);
+//   console.log(methodName);
+//   const mainMethod = descriptor.get;
+//   descriptor.get = function () {
+//     const res = mainMethod?.call(this);
+//     return typeof res === "string" ? res.toUpperCase() : res;
+//   };
+// }
+function MinLength(limit) {
+    return function (target, propertyKey) {
+        console.log(target);
+        console.log(propertyKey);
+        console.log(limit);
+        //! In this method, we only have access to the name and prototype of the class itself, but to change the properties and class, a library called Reflect Metadata must be used, which has additional explanations in the ts document.
     };
 }
 // @logger(18)
 // @insertInDOM("<h1>Hello Im Alireza Is The Best Ever !!</h1>")
 class User {
-    name;
     age;
     email;
+    name;
     constructor(name, age, email) {
-        this.name = name;
         this.age = age;
         this.email = email;
         this.name = name;
@@ -69,17 +80,17 @@ class User {
     speak(word) {
         console.log(`${this.name} says ${word}`);
     }
+    // @ToUpperCase
     get fullInfo() {
         return `${this.name} - ${this.age} - ${this.email}`;
     }
 }
 __decorate([
-    ToUpperCase,
-    __metadata("design:type", Object),
-    __metadata("design:paramtypes", [])
-], User.prototype, "fullInfo", null);
+    MinLength(3),
+    __metadata("design:type", String)
+], User.prototype, "name", void 0);
 const ali = new User("alireza", 15, "AlirezadeveloperUi@gmail.com");
 const komeyl = new User("kml", 9, "kml@gmail.com");
-console.log(ali.fullInfo);
+// console.log(ali.fullInfo);
 // ali.speak("Hello Ts")
 //# sourceMappingURL=app.js.map
